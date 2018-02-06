@@ -47,13 +47,57 @@ a {
 
 /*index*/
 .content{
-    width: 350px;
+    width: 50%;
     height: auto;
     text-align: center;
     background-color: white;
     box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75); 
     margin: auto;
 }
+.contentProfil{
+    width: 30%;
+    height: auto;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75); 
+    margin: auto;
+}
+.contentEditor{
+    width: 560px;
+    height: auto;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75); 
+    margin: auto;
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+@media (orientation: portrait) {
+
+.content{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75); 
+    margin: auto;
+}
+   
+.contentProfil{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75); 
+    margin: auto;
+}
+}
+
+
 
 
 header nav {

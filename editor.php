@@ -11,24 +11,23 @@
 include_once 'header.php';
 	include("funktionen.php");
 	db_connect("stellenboerse");
-	
+?>
+
+
+             <div class='contentEditor'>
+                 <center>
+<?php   
 	$tabellen[0][0] = "tbl_benutzer";
-	//$tabellen[1][0] = "tbl_benutzer";	$tabellen[1][1] = "8";
-    //$tabellen[2][0] = "tbl_berufe";		$tabellen[2][1] = "1";
-	//$tabellen[3][0] = "tbl_stellenart";	$tabellen[3][1] = "1";
     $tabellen[4][0] = "tbl_unternehmen"; $tabellen[4][1] = "1,5";
 	
 	$sort = "ORDER BY user_uid";
 
+       
 	maske($tabellen,$sort);
     
-
-    include_once 'footer.php';
-
 ?>
+       </center>          
+    </div>
 
 </BODY>
 </HTML>
-
-
-<?php include_once 'footer.php'; ?>

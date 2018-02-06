@@ -3,13 +3,15 @@
     include_once 'header.php';
 
     $uid = $_SESSION["u_id"];
+//Selektiert alle Datensätze, deren user_id mit der id des angeeldeten Benutzers übereinstimmt
     $sql = "SELECT * FROM tbl_benutzer WHERE user_id='$uid'";
 
     $result = $db->query($sql);
 if ($result->num_rows > 0) {
+    //Zeigt ein Card mit dem Inahlt von tbl_benutzer
     while($row = $result->fetch_assoc()) {
         echo"
-        <div class='content'>
+        <div class='contentProfil'>
         <center>
             <img src='../uploads/userpic/". $row["user_pic"]. "' alt='Avatar' style='width:100%'>
             <form action='upload.php' method='post' enctype='multipart/form-data'>
@@ -39,6 +41,3 @@ if ($result->num_rows > 0) {
   </body>
 </html>
 
-<?php
-    include_once 'header.php';
-?>

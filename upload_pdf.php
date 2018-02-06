@@ -22,7 +22,7 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 
 $FileTypePDF = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
+//Prüft ob die Datei eine Größe hat
 if(isset($_POST["submit"])) {
     $check = filesize($_FILES["fileToUpload"]["tmp_name"]);
     if($check !== false) {
@@ -58,10 +58,10 @@ if ($uploadOk == 0) {
     $newfilenamePDF = round(microtime(true)) . '.' . end($tempPDF);
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir . $newfilenamePDF)) {
             $uid = $_SESSION["u_id"];
-            $sql= 'INSERT INTO tbl_angebote(angebot_user_id, angebot_titel, angebot_beschreibung, angebot_position, angebot_fachbereich, angebot_beginn, angebot_url, angebot_pdf) 
+            $sql= 'INSERT INTO tbl_stellenangebote(angebot_user_id, angebot_titel, angebot_beschreibung, angebot_position, angebot_fachbereich, angebot_beginn, angebot_url, angebot_pdf) 
             VALUES("'.$uid.'", "'.$titel.'", "'.$beschreibung.'", "'.$position.'", "'.$fachbereich.'", "'.$beginn.'", "'.$url.'", "'.$newfilenamePDF.'")';
             mysqli_query($db, $sql);
-            echo "alert('Angebot wurde erfolgreich erstellt!');"
+            echo "alert('Angebot wurde erfolgreich erstellt!')";
                     header("Location: ./newjob.php");
     } else {
         echo "Upload fehgeschlagen!";

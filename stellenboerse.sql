@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 06. Feb 2018 um 13:47
+-- Erstellungszeit: 06. Feb 2018 um 22:12
 -- Server-Version: 10.1.30-MariaDB
 -- PHP-Version: 5.6.33
 
@@ -48,7 +48,7 @@ CREATE TABLE `tbl_benutzer` (
 --
 
 INSERT INTO `tbl_benutzer` (`user_id`, `user_titel`, `user_position`, `user_first`, `user_last`, `user_firm`, `user_email`, `user_telefon`, `user_uid`, `user_pic`, `user_pwd`, `user_rang`) VALUES
-(1, 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin@web.de', '12345', 'Admin', '1517919258.png', '$2y$10$gRFbd.8rntOpfmTiLDkv3erp3UDYwL9KOTX9bhmNU1Y5/uxlxgFJW', 'Admin'),
+(1, 'Admin', 'Admin', 'Admin', 'Admin', 'google.com', 'Admin@web.de', '12345', 'Admin', '1517919258.png', '$2y$10$gRFbd.8rntOpfmTiLDkv3erp3UDYwL9KOTX9bhmNU1Y5/uxlxgFJW', 'Admin'),
 (2, 'Herr', 'Angestellter', 'Viktor', 'Lau', 'Compuserv', 'info@lauviktor.de', '02196111111', 'Vito875', '1517919389.png', '$2y$10$8JFETbcJWRZHSAfs5YnZrOC92tBU95IGKiltOWoqPit.8w.oTesB.', 'User'),
 (3, 'Herr', 'Angestellter', 'Viktor', 'Lau', 'Ziemann', 'info@lauviktor.de', '02196111111', 'Ziemann', '0.png', '$2y$10$jYRPwNoe.lRAEt5EL58tQe2VeKHH/hBp9l/aDjRQSAUdo.OKxr4Hm', 'User');
 
@@ -1107,7 +1107,11 @@ INSERT INTO `tbl_stellenangebote` (`angebot_id`, `angebot_user_id`, `angebot_tit
 (1, 1, 'Neue Mitarbeiter gesucht', 'Einzelhandel', 'Kassenleitung', 'Einzelhandel', '2018-06-18', 'https://www.action.com/de-de/', '1517843123.pdf'),
 (2, 2, 'Wir brauchen UnterstÃ¼tzung!', 'Unser Team braucht dich!', 'Angestellter', 'Anwendungsentwickler', '2018-02-26', 'http://google.de', '1517849018.pdf'),
 (3, 2, 'Softwareentwicklung der Extraklasse', 'UnterstÃ¼tze unser Team', 'Angestellter', 'Anwendungsentwickler', '0000-00-00', 'http://google.de', '1517849573.pdf'),
-(4, 2, 'Softwareentwicklung der Extraklasse', 'UnterstÃ¼tze unser Team', 'Angestellter', 'Anwendungsentwickler', '0000-00-00', 'http://google.de', '1517849573.pdf');
+(4, 2, 'Softwareentwicklung der Extraklasse', 'UnterstÃ¼tze unser Team', 'Angestellter', 'Anwendungsentwickler', '0000-00-00', 'http://google.de', '1517849573.pdf'),
+(5, 2, 'Neue Mitarbeiter gesucht', 'Unser Team braucht dich!', 'Angestellter', 'Webentwickler', '2018-02-26', 'http://google.de', '1517948901.pdf'),
+(6, 2, 'Wir brauchen UnterstÃ¼tzung!', 'Du entwickelst gerne LÃ¶sungen fÃ¼r schwierige Probleme? Dann bist du bei uns richtig!', 'Angestellter', 'Webentwickler', '2018-02-26', 'http://google.de', '1517948990.pdf'),
+(7, 2, 'Neue Mitarbeiter gesucht', 'Neue MÃ¶glichkeiten', 'Angestellter', 'Webentwickler', '2018-08-01', 'http://google.de', '1517949129.pdf'),
+(8, 1, 'Deine Suche hat ein Ende!', 'Du arbeitest gerne im Team? Du magst es Projekte ohne Deadline zu fÃ¼hren? Du bist ZuverlÃ¤ssig und immer PÃ¼nktlich? Warte nicht lange, bewirb dich jetzt bei goolgle!', 'Teamleiter', 'Webentwicklung', '2018-05-01', 'http://google.de', '1517951009.pdf');
 
 -- --------------------------------------------------------
 
@@ -1212,7 +1216,7 @@ ALTER TABLE `tbl_plz`
 -- AUTO_INCREMENT für Tabelle `tbl_stellenangebote`
 --
 ALTER TABLE `tbl_stellenangebote`
-  MODIFY `angebot_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `angebot_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

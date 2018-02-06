@@ -6,13 +6,14 @@
 <BODY>
 <?php include_once 'header.php';?>
 
+                <div class='contentEditor'>
     <center><br>
           <h3>Neues Angebot erstellen</h3>
           <form  action="./upload_pdf.php" method="post" enctype="multipart/form-data">   
           <p style="margin-bottom: 5px; margin-top: 6px;">Titel des Angebots: </p>
           <input type="text" name="titel" placeholder="Titel">
           <p style="margin-bottom: 5px; margin-top: 6px;">Kurze Beschreibung: </p>
-          <input type="text" name="beschreibung" placeholder="Beschreibung">
+          <textarea name="beschreibung" placeholder="Beschreibe hier das Angebot"></textarea>
           <p style="margin-bottom: 5px; margin-top: 6px;">Verlinkung zur Homepage: </p>
           <input type="text" name="url" placeholder="Homepage">
           <p style="margin-bottom: 5px; margin-top: 6px;">Angebotene Position: </p>
@@ -28,5 +29,6 @@
           <p><button style="margin-bottom: 5px; margin-top: 6px;" type="submit" name="submit">Angebot erstellen</button></p>
         </form>
     </center>
+    </div>
 </BODY>
 </HTML>

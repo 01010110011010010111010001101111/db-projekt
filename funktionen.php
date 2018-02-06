@@ -308,7 +308,7 @@ function maske($tabellen,$sort)
 		else
 		{
 			// normales Inputfeld
-			echo "<input style='text-align:left' name='$fn' type='text' 	size='50' maxlength='30' value='";
+			echo "<input style='text-align:left' name='$fn' type='text' 	size='50'  value='";
 			if ($newdata == false) echo mysql_result($result, $satznr, $i); 
 			echo "'>";
 		}

@@ -9,7 +9,9 @@
 <?php
 	include("funktionen.php");
 	db_connect("stellenboerse");
-	
+	?>
+             <div class='contentEditor'>    
+    <?php
 	$tabellen[0][0] = "tbl_stellenangebote";
 	$tabellen[1][0] = "tbl_benutzer";	$tabellen[1][1] = "8";
     $tabellen[2][0] = "tbl_berufe";		$tabellen[2][1] = "1";
@@ -19,11 +21,10 @@
 	$sort = "ORDER BY angebot_beschreibung";
 
 	maske($tabellen,$sort);
-    
-
-    include_once 'footer.php';
-
+                 
 ?>
 
+    </div>    
+    
 </BODY>
 </HTML>
