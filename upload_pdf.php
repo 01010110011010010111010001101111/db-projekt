@@ -61,6 +61,7 @@ if ($uploadOk == 0) {
             $sql= 'INSERT INTO tbl_angebote(angebot_user_id, angebot_titel, angebot_beschreibung, angebot_position, angebot_fachbereich, angebot_beginn, angebot_url, angebot_pdf) 
             VALUES("'.$uid.'", "'.$titel.'", "'.$beschreibung.'", "'.$position.'", "'.$fachbereich.'", "'.$beginn.'", "'.$url.'", "'.$newfilenamePDF.'")';
             mysqli_query($db, $sql);
+            echo "alert('Angebot wurde erfolgreich erstellt!');"
                     header("Location: ./newjob.php");
     } else {
         echo "Upload fehgeschlagen!";

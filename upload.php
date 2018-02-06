@@ -35,8 +35,8 @@ if($imageFileType != "png") {
 }
 //Prüft die Dimensionen
 list($width, $height) = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-if($width > "64" || $height > "64"||$width < "63" || $height < "63") {
-    echo "Das Bild muss 64 x 64 Pixel sein.";
+if($width > "256" || $height > "256"||$width < "255" || $height < "255") {
+    echo "Das Bild muss 256 x 256 Pixel sein.";
     $uploadOk = 0;
 }
 
@@ -55,7 +55,7 @@ if ($uploadOk == 0) {
         <center>
             <img src='../uploads/userpic/". $newfilename. "' alt='Avatar' style='width:10%'> </center>
             "; 
-            $sql = 'UPDATE tbl_benutzer SET user_pic = "'.$newfilename.'" WHERE user_id = "$uid"';
+            $sql = 'UPDATE tbl_benutzer SET user_pic = "'.$newfilename.'" WHERE user_id = "'.$uid.'"';
             mysqli_query($db, $sql);
                     header("Location: ./profil.php");
             die();    

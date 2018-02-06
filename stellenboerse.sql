@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 05. Feb 2018 um 21:15
+-- Erstellungszeit: 06. Feb 2018 um 13:47
 -- Server-Version: 10.1.30-MariaDB
 -- PHP-Version: 5.6.33
 
@@ -48,8 +48,9 @@ CREATE TABLE `tbl_benutzer` (
 --
 
 INSERT INTO `tbl_benutzer` (`user_id`, `user_titel`, `user_position`, `user_first`, `user_last`, `user_firm`, `user_email`, `user_telefon`, `user_uid`, `user_pic`, `user_pwd`, `user_rang`) VALUES
-(1, 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin@web.de', '12345', 'Admin', '1517223777.png', '$2y$10$gRFbd.8rntOpfmTiLDkv3erp3UDYwL9KOTX9bhmNU1Y5/uxlxgFJW', 'Admin'),
-(2, 'Herr', 'Angestellter', 'Viktor', 'Lau', 'Compuserv', 'info@lauviktor.de', '02196111111', 'Vito875', '0.png', '$2y$10$8JFETbcJWRZHSAfs5YnZrOC92tBU95IGKiltOWoqPit.8w.oTesB.', 'User');
+(1, 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin@web.de', '12345', 'Admin', '1517919258.png', '$2y$10$gRFbd.8rntOpfmTiLDkv3erp3UDYwL9KOTX9bhmNU1Y5/uxlxgFJW', 'Admin'),
+(2, 'Herr', 'Angestellter', 'Viktor', 'Lau', 'Compuserv', 'info@lauviktor.de', '02196111111', 'Vito875', '1517919389.png', '$2y$10$8JFETbcJWRZHSAfs5YnZrOC92tBU95IGKiltOWoqPit.8w.oTesB.', 'User'),
+(3, 'Herr', 'Angestellter', 'Viktor', 'Lau', 'Ziemann', 'info@lauviktor.de', '02196111111', 'Ziemann', '0.png', '$2y$10$jYRPwNoe.lRAEt5EL58tQe2VeKHH/hBp9l/aDjRQSAUdo.OKxr4Hm', 'User');
 
 -- --------------------------------------------------------
 
@@ -1102,10 +1103,11 @@ CREATE TABLE `tbl_stellenangebote` (
 --
 
 INSERT INTO `tbl_stellenangebote` (`angebot_id`, `angebot_user_id`, `angebot_titel`, `angebot_beschreibung`, `angebot_position`, `angebot_fachbereich`, `angebot_beginn`, `angebot_url`, `angebot_pdf`) VALUES
-(0, 1, 'Einzelhandelskaufmann', 'Unterstütze unser Team!', 'Angestellter', 'Einzelhandel', '2018-02-04', 'http://rewe.de', '1517267222.pdf'),
+(0, 1, 'Einzelhandelskaufmann', 'UnterstÃ¼tze unser Team!', 'Angestellter', 'Einzelhandel', '2018-02-04', 'http://rewe.de', '1517267222.pdf'),
 (1, 1, 'Neue Mitarbeiter gesucht', 'Einzelhandel', 'Kassenleitung', 'Einzelhandel', '2018-06-18', 'https://www.action.com/de-de/', '1517843123.pdf'),
-(2, 2, 'Wir brauchen Unterstützung!', 'Unser Team braucht dich!', 'Angestellter', 'Anwendungsentwickler', '2018-02-26', 'http://google.de', '1517849018.pdf'),
-(3, 2, 'Softwareentwicklung der Extraklasse', 'Unterstütze unser Team', 'Angestellter', 'Anwendungsentwickler', '2018-05-05', 'http://google.de', '1517849573.pdf');
+(2, 2, 'Wir brauchen UnterstÃ¼tzung!', 'Unser Team braucht dich!', 'Angestellter', 'Anwendungsentwickler', '2018-02-26', 'http://google.de', '1517849018.pdf'),
+(3, 2, 'Softwareentwicklung der Extraklasse', 'UnterstÃ¼tze unser Team', 'Angestellter', 'Anwendungsentwickler', '0000-00-00', 'http://google.de', '1517849573.pdf'),
+(4, 2, 'Softwareentwicklung der Extraklasse', 'UnterstÃ¼tze unser Team', 'Angestellter', 'Anwendungsentwickler', '0000-00-00', 'http://google.de', '1517849573.pdf');
 
 -- --------------------------------------------------------
 
@@ -1192,7 +1194,7 @@ ALTER TABLE `tbl_unternehmen`
 -- AUTO_INCREMENT für Tabelle `tbl_benutzer`
 --
 ALTER TABLE `tbl_benutzer`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT für Tabelle `tbl_berufe`
@@ -1210,7 +1212,7 @@ ALTER TABLE `tbl_plz`
 -- AUTO_INCREMENT für Tabelle `tbl_stellenangebote`
 --
 ALTER TABLE `tbl_stellenangebote`
-  MODIFY `angebot_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `angebot_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

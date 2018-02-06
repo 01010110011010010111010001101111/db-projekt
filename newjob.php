@@ -6,7 +6,7 @@
 <BODY>
 <?php include_once 'header.php';?>
 
-    <center>
+    <center><br>
           <h3>Neues Angebot erstellen</h3>
           <form  action="./upload_pdf.php" method="post" enctype="multipart/form-data">   
           <p style="margin-bottom: 5px; margin-top: 6px;">Titel des Angebots: </p>
