@@ -25,7 +25,7 @@
           $result = $db->query($sql);
 
            if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
+            while($row = $result->fetch_assoc()) { 
             echo"
         <center>
             <p><img src='../uploads/userpic/". $row["user_pic"]. "' alt='Avatar' style='width:10%'></>
@@ -35,18 +35,16 @@
             <p>Beschreibung: " . $row["angebot_beschreibung"]."</>
             <p>Position: " . $row["angebot_position"]."</>
             <p>Fachbereich: " . $row["angebot_fachbereich"]."</>
-            <p>Beginn: " . $row["angebot_beginn"]."</>
-            <p><a target='_blank' href='".$row["angebot_url"]."'>Homepage</a></><br><br>
+            <p>Beginn: " . $row["angebot_beginn"]."</><br><br>
             <object width='300' height='200' data=' ../uploads/pdf/pdf_files/".$row["angebot_pdf"]." '></object>
-            <p><a target='_blank' href='../uploads/pdf/pdf_files/".$row["angebot_pdf"]."'>Stellenbeschreibung im PDF-Format</a></>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            <p><a target='_blank' href='".$row["angebot_url"]."'><img width='48' height='48' border='0' align='center'  src='../images/web.png'/></a>
+            <a target='_blank' href='../uploads/pdf/pdf_files/".$row["angebot_pdf"]."'><img width='48' height='48' border='0' align='center'  src='../images/file-pdf.png'/></a></>
+            <br><br><br>
             </center>
-       ";                 
+       "; 
+
     };
+                           
 };
             
           
