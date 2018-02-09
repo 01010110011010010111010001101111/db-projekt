@@ -7,16 +7,18 @@
     <head>
       <meta charset="utf-8">
       <link rel="stylesheet" type="text/css" href="index-style.css">
-      <title>Jobbörse</title>
+      <title>my Job Portal</title>
     </head>
     <body>
 
       <header>
         <nav>
           <div class="main-wrapper">
-            <ul>
-              <li><a href="index.php">Home</a></li>
+		    <ul>
+              <li>		<a href="index.php"><img src="./images/logo.png" alt="my Job Portal" width="128" height="64" border="0"></a>		</li>
             </ul>
+
+
             <div class="nav-login">
               <?php
                 if (isset($_SESSION['u_id'])) {
@@ -30,6 +32,7 @@
                             <div class="dropdown">
                             <span>___<br>___<br>___</span>
                             <div class="dropdown-content">
+                            <a href="index.php">Home</a>
                             <a href="profil.php">Mein Profil</a>
                             <a href="stellenangebote.php">Editor</a>
                             <a href="#"><form action="includes/logout.inc.php" method="post">

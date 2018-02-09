@@ -1,5 +1,6 @@
 <?PHP
 
+
 function db_connect($db_name)
 {
 	/*
@@ -266,7 +267,9 @@ function maske($tabellen,$sort)
 	{	
 		$fn = mysql_field_name($result,$i);
 		$feldname[$i] = $fn;	// Array der Feldnamen aufbauen
-		echo "<tr><td width='250px'> " . $fn . "</td><td>";
+		
+        if (!isset($label[$i])) echo "<tr><td width='250px'> " . $fn . "</td><td>"; else echo "<tr><td width='250px'> " . $label[$i] . "</td><td>";
+
 		if (strtolower(substr($fn,-3)) == "_id" && $i > 0) 
 		{	
 			// Select-Box mit Zugriff auf eine verknüpfte Tabelle
@@ -285,7 +288,12 @@ function maske($tabellen,$sort)
 			if ($menge_h > 0) $fk_value = mysql_result($result, $satznr, $i); // ID-Wert der Haupttabelle
 				else $fk_value=0;
 			
-			echo "<select name='$fn' size='1' style='width:100%'>";
+            
+                    $uid = $_SESSION["u_id"];
+                     
+                     if ($uid !=1){
+			echo "<select disabled name='$fn' size='1' style='width:100%'></select>";}else{
+                         			echo "<select id='sbox' name='$fn' size='1' style='width:100%'>";
 			if ($newdata == true) echo "<option value='0'>-- bitte wählen --</option>";
 			for ($k=0;$k < $menge_h;$k++)
 			{
@@ -302,8 +310,8 @@ function maske($tabellen,$sort)
 				echo ">$wert</option>";
 
 			}
-			echo "</select>";			
-			
+			echo "</select>";
+                     }
 		}
 		else
 		{

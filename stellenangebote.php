@@ -18,8 +18,14 @@
 	$tabellen[3][0] = "tbl_stellenart";	$tabellen[3][1] = "1";
     $tabellen[4][0] = "tbl_unternehmen"; $tabellen[4][1] = "1,5";
 	
-	$sort = "ORDER BY angebot_beschreibung";
-
+                 
+                     $uid = $_SESSION["u_id"];
+                     
+                     if ($uid == 1){
+                         	$sort = "ORDER BY angebot_beschreibung ";
+                     }else{	$sort = 'WHERE angebot_user_id = "'.$uid.'" ORDER BY angebot_beschreibung ';}
+                                          
+            
 	maske($tabellen,$sort);
                  
 ?>

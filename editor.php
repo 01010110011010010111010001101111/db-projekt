@@ -18,9 +18,15 @@ include_once 'header.php';
                  <center>
 <?php   
 	$tabellen[0][0] = "tbl_benutzer";
-    $tabellen[4][0] = "tbl_unternehmen"; $tabellen[4][1] = "1,5";
-	
-	$sort = "ORDER BY user_uid";
+    
+    $uid = $_SESSION["u_id"];
+                     
+                     if ($uid == 1){
+                         	$sort = "ORDER BY user_uid ";
+                     }else{	$sort = 'WHERE user_id = "'.$uid.'" ORDER BY user_uid ';}
+                                          
+                     
+
 
        
 	maske($tabellen,$sort);
